@@ -1,22 +1,82 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* Cor de fundo branca */
+    display: all; /* Inicialmente oculto */
+    z-index: 9998; /* Colocado abaixo do z-index do loader */
+}
+
+.loader {
+    display: inline-grid;
+    padding: 5px;
+    background: #fff;
+    filter: blur(4px) contrast(12);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Certifica-se de que o loader apareça acima de outros elementos */
+}
+
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    height: 40px;
+    aspect-ratio: 3;
+    --c: #0000 64%, #000 66% 98%, #0000 101%;
+    background:
+        radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+        radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+    background-size: calc(200%/3) 50%;
+    background-repeat: repeat-x;
+    clip-path: inset(0 100% 0 0);
+    animation: l16 1.5s infinite linear;
+}
+
+.loader:after {
+    scale: -1 1;
+    animation-delay: -.75s;
+}
+
+@keyframes l16 {
+    50% { clip-path: inset(0); }
+    to { clip-path: inset(0 0 0 100%); }
+}
+
+
 /* Reset some default styles */
 body,
 h1,
 h2,
 h3,
 p,
+html,
 ul {
     margin: 0;
     padding: 0;
 }
 
+
+p, h2, h3, li {
+    color: #ddd;
+}
+
+
 body {
+    
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(119deg, #8BC6EC 0%, #9599E2 100%);
+    color: #333;
     padding: 20px;
     text-align: center;
 }
@@ -29,20 +89,21 @@ header p {
     font-style: italic;
 }
 
-section {
-    max-width: 800px;
+section{
+    max-width: 90%;
     margin: 40px auto;
-    padding: 20px;
+    padding: 3%;
     border: 1px solid #ddd;
     border-radius: 8px;
+    padding-bottom: 0%
 }
 
 h2 {
-    color: #333;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
 
 ul {
     list-style-type: none;
@@ -82,3 +143,194 @@ footer {
         padding: 10px;
     }
 }
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+  }
+  
+  .button:active {
+    transform: scale(0.97);
+  }
+  
+  .hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hoverEffect div {
+    background: rgb(222,0,75);
+    background: linear-gradient(90deg, rgba(222,0,75,1) 0%, rgba(191,70,255,1) 49%, rgba(0,212,255,1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+  }
+  
+  .button:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  @keyframes effect {
+  
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Gradient Background */
+body {
+    background: linear-gradient(to bottom, rgb(20, 30, 48), rgb(36, 59, 85));
+}
+
+
+/* screenshots */
+#projetos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* ou 'space-between' dependendo do efeito desejado */
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+
+
+
+/* CSS CARD TEMPLATE */
+.card {
+    width: 260px;
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    padding: 10px 1px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+    border-radius: 10px;
+    background-color: #6B6ECC;
+    background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+    
+}
+
+.capa {
+    width: 280px;
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+    background-color: #6B6ECC;
+    background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+      
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+; 
+  }
+
+  .card-img-top {
+    position: center;
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    
+}
+
+  #c1 {
+    border-radius: 30px;
+    background: linear-gradient(145deg, #474747, #333);
+  }
+  
+  #c2 {
+    border-radius: 30px;
+    background: linear-gradient(145deg, #474747, #333);
+  }
+  
+  #c3 {
+    border-radius: 30px;
+    background: linear-gradient(145deg, #474747, #333);
+  }
+  
+  #c4 {
+    border-radius: 30px;
+    background: linear-gradient(145deg, #474747, #333);
+  }
+  
+  #c5{
+    border-radius: 30px;
+  }
+
+
+  .main:hover #c1 {
+    transform: translateX(-100%) rotate(-40deg);
+  }
+  
+  .main:hover #c2 {
+    transform: translateX(-50%) rotate(-30deg);
+  }
+  
+  .main:hover #c3 {
+    transform: translateX(0) rotate(-20deg);
+  }
+  
+  .main:hover #c4 {
+    transform: translateX(50%) rotate(-10deg);
+  }
+
+  .main:hover #c5 {
+    transform: translateX(750%) rotate(-10deg);
+  }
+
+  #c1:hover {
+    transform: translateX(-150%) rotate(0deg) !important;
+  }
+  
+  #c2:hover {
+    transform: translateX(-100%) rotate(0deg) !important;
+  }
+  
+  #c3:hover {
+    transform: translateX(-50%) rotate(0deg) !important;
+  }
+  
+  #c4:hover {
+    transform: translateX(50%) rotate(0deg) !important;
+  }
+  
+  #c5:hover {
+    transform: translateX(50%) rotate(0deg) !important;
+  }
