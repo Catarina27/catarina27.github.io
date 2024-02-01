@@ -1,5 +1,3 @@
-// Add JavaScript functionality here
-
 document.addEventListener("DOMContentLoaded", function () {
     // Code to run after the DOM has loaded
 
@@ -20,4 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+        const loader = document.getElementById('loader');
+        const overlay = document.getElementById('overlay');
+
+        if (loader && overlay) {
+            // Oculta o loader
+            loader.style.display = 'none';
+            // Oculta a camada de fundo
+            overlay.style.display = 'none';
+        }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactButton = document.getElementById('contactButton');
+
+    if (contactButton) {
+        contactButton.addEventListener('click', function () {
+            // Adicione a ação desejada aqui
+            alert('Botão clicado!'); // Exemplo: exibe um alerta
+            // Você pode abrir um formulário de contato, redirecionar para outra página, etc.
+        });
+    }
 });
