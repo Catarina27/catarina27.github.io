@@ -4,30 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Developer</title>
+    <title>Catarina Gomes - Software Developer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 
 </head>
 
 <body>
+
+    <div class="loader" id="loader"></div>
+    <div class="overlay" id="overlay"></div>
+
     <header>
-        <h1>Your Name</h1>
+        <h1>Catarina</h1>
         <p>Software Developer</p>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Your Name, a passionate software developer with a strong background in...</p>
+        <p>Hi, Catarina, a passionate software developer with a Bachelor's Degree in Telecommunications and Computer Engineering.</p>
         <!-- Add more details about yourself here -->
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Programming Languages: Java, JavaScript, Python</li>
-            <li>Web Technologies: HTML, CSS, React, Node.js</li>
-            <li>Database: MySQL, MongoDB</li>
+            <li>Programming Languages: C/C++, Java, JavaScript</li>
+            <li>Web Technologies: HTML, CSS, ReactNative, Node.js, HTTP/HTTPS Protocols</li>
+            <li>Database: SQL</li>
+            <li>Telecommunications: Signal processing, Wireless communication, Network protocols, Digital communication systems</li>
+            <li>Computer Engineering: Computer architecture, Embedded systems, Operating systems, Microprocessor/microcontroller programming</li>
+            <li>Networking: TCP/IP protocols, Network security, Routing and switching, Network design and management</li>
+            <li>Software Engineering: Software development life cycle, Algorithm design and analysis, Object-oriented programming, Software testing and debugging</li>
+            <li>Project Management: Project planning and execution, Team collaboration, Problem-solving and critical thinking</li>
             <!-- Add more skills as needed -->
         </ul>
     </section>
@@ -35,32 +44,81 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1. Lorem ipsum dolor sit amet...</p>
-            <a href="link-to-project1" target="_blank">View Project</a>
+            <h3>Libray Management App</h3>
+            <p>A simple library management app using a REST API. Built in React Native.</p>
+            <a href="https://bitbucket.org/1221348/dssmv_projectreact_1221348_1220918/src/master/" target="_blank">View Project</a>
         </div>
 
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2. Lorem ipsum dolor sit amet...</p>
-            <a href="link-to-project2" target="_blank">View Project</a>
+            <h3>Pawlyglot</h3>
+            <p>Pawlyglot is an Android application that uses a translation API to perform translations between different languages. Additionally, it offers features such as automatic language detection and image support.</p>
+            <a href="https://bitbucket.org/1221348/dssmv_projectdroid_1221348_1221307/src/master/" target="_blank">View Project</a>
         </div>
         <!-- Add more projects as needed -->
     </section>
 
+    <section id="projetos">
+        <div class="main">
+            <div class="card" id="c1">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card" id="c2">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card" id="c3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. 
+                    This card has even longer content than the first to show that equal height action.
+                    Mais texto para ver o quão grande pode ficar o  cartão, se dá para colocar um screenshot para as apps que fizer
+                Também algum texto para descrever</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card" id="c4">
+                <img class="card-img-top" src="..." alt="Card image capa">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            <div class="capa" id="c5">
+                <img class="card-img-top" src="https://w0.peakpx.com/wallpaper/792/112/HD-wallpaper-surreal-blue-purple-abstract-black-design-iphone-modern-moving-pattern.jpg" alt="Card image cap">
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2><button class="button" id="contactButton">
+            Get in touch
+            <div class="hoverEffect"><div>
+            </div></div></button>
+            Contact Me
+        </h2>
+        
         <p>Feel free to reach out to me. I'm open to collaborations and new opportunities.</p>
         <ul>
-            <li>Email: your.email@example.com</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/your-name" target="_blank">Your Name</a></li>
+            <li>Email: catarinafg@gmail.com</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/catarinafg/" target="_blank">Your Name</a></li>
             <li>GitHub: <a href="https://github.com/your-username" target="_blank">Your Username</a></li>
             <!-- Add more contact information as needed -->
         </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Catarina Ferreira Gomes. All rights reserved.</p>
     </footer>
 </body>
 
